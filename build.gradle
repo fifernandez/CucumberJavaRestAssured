@@ -1,0 +1,84 @@
+import org.gradle.api.tasks.testing.logging.TestLogEvent
+
+plugins {
+    id 'idea'
+    id 'java'
+    id 'se.thinkcode.cucumber-runner' version '0.0.11'
+    id "com.github.spacialcircumstances.gradle-cucumber-reporting" version "0.1.24"
+}
+
+group 'ff.test'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
+    testImplementation "io.cucumber:cucumber-java:7.3.2"
+    testImplementation "io.cucumber:cucumber-junit:7.3.2"
+    testImplementation "org.junit.vintage:junit-vintage-engine:5.8.2"
+    testImplementation 'org.json:json:20220320'
+    testImplementation 'io.rest-assured:rest-assured:5.0.1'
+    testImplementation "commons-io:commons-io:2.11.0"
+}
+
+test {
+    useJUnitPlatform()
+    systemProperty("cucumber.junit-platform.naming-strategy", "long")
+    testLogging {
+        events TestLogEvent.FAILED, TestLogEvent.PASSED, TestLogEvent.SKIPPED
+    }
+    systemProperties(project.gradle.startParameter.systemPropertiesArgs)
+    ignoreFailures = true
+}
+
+cucumberReports {
+    outputDir = file('build/reports/')
+    buildId = '0'
+    reports = files('build/reports/cucumber.json')
+    excludeTags = []
+    expandAllSteps = false
+}
+
+configurations {
+    cucumberRuntime {
+        extendsFrom testImplementation
+    }
+}
+
+task runTests() {
+    dependsOn assemble, testClasses
+    finalizedBy generateCucumberReports
+    doLast {
+        javaexec {
+            main = "io.cucumber.core.cli.Main"
+            classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
+            args = [
+                    '--plugin', 'pretty',
+                    '--plugin', "json:${reporting.baseDir}/cucumber.json",
+                    '--plugin', "junit:${reporting.baseDir}/cucumber.xml",
+                    '--plugin', "html:${reporting.baseDir}/cucumber-report.html",
+                    '--plugin', "rerun:${reporting.baseDir}/rerun.txt",
+                    '--glue', "src/test/resources/cucumber/features",
+                    '--glue', "support"
+            ]
+            ignoreExitValue = true
+        }
+    }
+}
+
+cucumber {
+    main = 'io.cucumber.core.cli.Main'
+    //threads = '1'
+    plugin = [
+            "pretty",
+            "json:build/reports/cucumber.json",
+            "junit:build/reports/cucumber.xml",
+            "rerun:build/reports/rerun.txt",
+            "html:build/reports/cucumber-report.html"
+    ]
+}
+

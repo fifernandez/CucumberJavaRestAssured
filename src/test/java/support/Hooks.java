@@ -14,8 +14,8 @@ public class Hooks {
 
     @Before
     public void beforeScenario(Scenario scenario){
-        PrintStream requestCapture = new PrintStream(new WriterOutputStream(requestWriter), true);
-        PrintStream responseCapture = new PrintStream(new WriterOutputStream(responseWriter), true);
+        PrintStream requestCapture = new PrintStream(new WriterOutputStream(requestWriter, "UTF-8"), true);
+        PrintStream responseCapture = new PrintStream(new WriterOutputStream(responseWriter, "UTF-8"), true);
         RestAssured.filters(new RequestLoggingFilter(requestCapture), new ResponseLoggingFilter(responseCapture));
     }
 

@@ -3,6 +3,7 @@ Feature: Rest API functionality Scenarios
   I want to be sure
   That the Rest API is working as expected
 
+
   @1 @2
   Scenario Outline: Verify status code returned is expected
     Given get call to "<url>"
@@ -13,6 +14,7 @@ Feature: Rest API functionality Scenarios
       | /users | 200          |
       | /todos | 200          |
       | /todos | 202          |
+
 
   @2 @3
   Scenario Outline: Verify amount of returned items is expected

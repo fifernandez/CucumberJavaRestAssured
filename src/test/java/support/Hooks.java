@@ -5,10 +5,18 @@ import io.restassured.RestAssured;
 import io.restassured.filter.log.RequestLoggingFilter;
 import io.restassured.filter.log.ResponseLoggingFilter;
 import org.apache.commons.io.output.WriterOutputStream;
+import util.Environment;
 import java.io.PrintStream;
 import java.io.StringWriter;
 
 public class Hooks {
+
+    @BeforeAll
+    public static void setUp(){
+        //RestAssured.port = "";
+        RestAssured.baseURI = Environment.getBasePath();
+        //RestAssured.basePath = "";
+    }
     StringWriter requestWriter = new StringWriter();
     StringWriter responseWriter = new StringWriter();
 

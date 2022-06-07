@@ -1,0 +1,10 @@
+{
+  "users": {
+    "private": "null",
+    "public": "users"
+  },
+  "todos": {
+    "private": "null",
+    "public": "todos"
+  }
+}

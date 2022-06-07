@@ -9,34 +9,35 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import org.json.JSONArray;
 import org.junit.Assert;
-import support.BaseClass;
+import util.EndpointsURI;
+import util.Environment;
+import util.Users;
 
 import java.net.URI;
 
-public class GeneralSteps extends BaseClass {
-
+public class GeneralSteps {
     private Scenario scenario;
     private Response response;
-    //private final String BASE_URL = "http://localhost:8888";
-    private final String BASE_URL = "https://jsonplaceholder.typicode.com";
+    //private final String BASE_URL = "https://jsonplaceholder.typicode.com";
+    private String BASE_PATH = EndpointsURI.getURI("users");
 
     @Before
     public void before(Scenario scenarioVal) {
         this.scenario = scenarioVal;
     }
 
-    @Given("get call to {string}")
-    public void get_call_to_url(String url) throws Exception {
-        RestAssured.baseURI = BASE_URL;
+    @Given("I do a get to the {string} endpoint")
+    public void get_call_to_endpoint(String endpoint) throws Exception {
+        Assert.assertTrue(String.format("Endpoint '%s' is not defined in the json file.", endpoint), EndpointsURI.endpointDefined(endpoint));
+        BASE_PATH = EndpointsURI.getURI(endpoint);
         RequestSpecification req = RestAssured.given();
-        response = req.when().get(new URI(url));
+        response = req.when().get(new URI(BASE_PATH));
     }
 
     @Then("the returned status code is: {string}")
     public void response_is_validated(String responseMessage) throws InterruptedException {
         int responseCode = response.then().extract().statusCode();
         Assert.assertEquals(responseMessage, String.valueOf(responseCode));
-        Thread.sleep(1000);
     }
 
     @Then("the response contains {string} items")

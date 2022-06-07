@@ -6,23 +6,23 @@ Feature: Rest API functionality Scenarios
 
   @1 @2
   Scenario Outline: Verify status code returned is expected
-    Given get call to "<url>"
+    Given I do a get to the "<Endpoint>" endpoint
     Then the returned status code is: "<ExpectedCode>"
 
     Examples:
-      | url    | ExpectedCode |
-      | /users | 200          |
-      | /todos | 200          |
-      | /todos | 202          |
+      | Endpoint | ExpectedCode |
+      | users    | 200          |
+      | todos    | 200          |
+      | todos    | 202          |
 
 
   @2 @3
   Scenario Outline: Verify amount of returned items is expected
-    Given get call to "<url>"
+    Given I do a get to the "<Endpoint>" endpoint
     Then the returned status code is: "200"
     And the response contains "<amount>" items
 
     Examples:
-      | url    | amount |
-      | /users | 10     |
-      | /users | 18     |
+      | Endpoint | amount |
+      | users    | 10     |
+      | users    | 18     |

@@ -9,17 +9,14 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import org.json.JSONArray;
 import org.junit.Assert;
-import util.EndpointsURI;
-import util.Environment;
-import util.Users;
-
+import support.Endpoints;
 import java.net.URI;
 
 public class GeneralSteps {
     private Scenario scenario;
     private Response response;
     //private final String BASE_URL = "https://jsonplaceholder.typicode.com";
-    private String BASE_PATH = EndpointsURI.getURI("users");
+    private String BASE_PATH = Endpoints.getURI("users");
 
     @Before
     public void before(Scenario scenarioVal) {
@@ -28,8 +25,8 @@ public class GeneralSteps {
 
     @Given("I do a get to the {string} endpoint")
     public void get_call_to_endpoint(String endpoint) throws Exception {
-        Assert.assertTrue(String.format("Endpoint '%s' is not defined in the json file.", endpoint), EndpointsURI.endpointDefined(endpoint));
-        BASE_PATH = EndpointsURI.getURI(endpoint);
+        Assert.assertTrue(String.format("Endpoint '%s' is not defined in the json file.", endpoint), Endpoints.endpointDefined(endpoint));
+        BASE_PATH = Endpoints.getURI(endpoint);
         RequestSpecification req = RestAssured.given();
         response = req.when().get(new URI(BASE_PATH));
     }

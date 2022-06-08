@@ -1,0 +1,73 @@
+{
+  "defaultEnvironment": "prod",
+  "defaultMode": "public",
+  "environments": [
+    "dev",
+    "qa",
+    "stage",
+    "prod"
+  ],
+  "modes": [
+    "private",
+    "public"
+  ],
+  "basePaths": {
+    "dev": {
+      "private": "",
+      "public": ""
+    },
+    "qa": {
+      "private": "",
+      "public": ""
+    },
+    "stage": {
+      "private": "",
+      "public": ""
+    },
+    "prod": {
+      "private": "",
+      "public": "https://jsonplaceholder.typicode.com"
+    }
+  },
+  "testRail": {
+    "url": "",
+    "user": "",
+    "pass": ""
+  },
+  "endpoints": {
+    "posts": {
+      "private": "null",
+      "public": "/posts"
+    },
+    "comments": {
+      "private": "null",
+      "public": "/comments"
+    },
+    "albums": {
+      "private": "null",
+      "public": "/albums"
+    },
+    "photos": {
+      "private": "null",
+      "public": "/photos"
+    },
+    "users": {
+      "private": "null",
+      "public": "/users"
+    },
+    "todos": {
+      "private": "null",
+      "public": "/todos"
+    }
+  },
+  "users": {
+    "pepe": {
+      "email": "pepe@gmail.com",
+      "password": "123456"
+    },
+    "john": {
+      "email": "john@gmail.com",
+      "password": "123456"
+    }
+  }
+}

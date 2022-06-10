@@ -13,7 +13,7 @@ public class Configuration {
     static final String configFile = "src/test/java/config/config.json";
 
     public static boolean loadEnvironments() {
-        JSONArray js = JsonReader.readJSONArrayFromFile(configFile, "environments");
+        JSONArray js = JsonFileReader.readJSONArrayFromFile(configFile, "environments");
         if (js != null) {
             Environment.setEnvs(js);
             return true;
@@ -23,7 +23,7 @@ public class Configuration {
     }
 
     public static boolean loadModes() {
-        JSONArray js = JsonReader.readJSONArrayFromFile(configFile, "modes");
+        JSONArray js = JsonFileReader.readJSONArrayFromFile(configFile, "modes");
         if (js != null) {
             Environment.setModes(js);
             return true;
@@ -33,7 +33,7 @@ public class Configuration {
     }
 
     public static boolean loadDefaultEnvironmentAndMode() {
-        JSONObject js = JsonReader.readFromFile(configFile);
+        JSONObject js = JsonFileReader.readFromFile(configFile);
         if (js != null) {
             String newDefaultEnv = (String) js.get("defaultEnvironment");
             String newDefaultMode = (String) js.get("defaultMode");
@@ -46,7 +46,7 @@ public class Configuration {
     }
 
     public static boolean loadBasePaths() {
-        JSONObject js = JsonReader.readJSONObjectFromFile(configFile, "basePaths");
+        JSONObject js = JsonFileReader.readJSONObjectFromFile(configFile, "basePaths");
         if (js != null) {
             BasePath.setBasePaths(js);
             return true;
@@ -56,7 +56,7 @@ public class Configuration {
     }
 
     public static boolean loadEndpoints() {
-        JSONObject js = JsonReader.readJSONObjectFromFile(configFile, "endpoints");
+        JSONObject js = JsonFileReader.readJSONObjectFromFile(configFile, "endpoints");
         if (js != null) {
             Endpoints.setEndpoints(js);
             return true;
@@ -66,7 +66,7 @@ public class Configuration {
     }
 
     public static boolean loadUsers() {
-        JSONObject js = JsonReader.readJSONObjectFromFile(configFile, "users");
+        JSONObject js = JsonFileReader.readJSONObjectFromFile(configFile, "users");
         if (js != null) {
             Users.setUsers(js);
             return true;

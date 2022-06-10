@@ -15,7 +15,7 @@ import org.junit.runner.RunWith;
                 "json:build/reports/cucumber.json",
                 "junit:build/reports/cucumber.xml",
                 "rerun:build/reports/rerun.txt",
-                "html:build/reports/cucumber.html"
+                "html:build/reports/cucumber-report.html"
         },
         tags = ""
         )

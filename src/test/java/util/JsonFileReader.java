@@ -5,7 +5,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import java.io.FileReader;
 
-public class JsonReader {
+public class JsonFileReader {
 
     @SuppressWarnings("unchecked")
     public static JSONObject readFromFile(String fileName) {

@@ -26,3 +26,9 @@ Feature: Rest API functionality Scenarios
       | Endpoint | amount |
       | users    | 10     |
       | users    | 18     |
+
+
+  @4
+  Scenario: Verify status code returned is expected 2323
+    Given I do a get to the "users" endpoint just to test with bad parameters
+    Then the returned status code is: "205"

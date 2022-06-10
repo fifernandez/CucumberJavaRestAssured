@@ -6,6 +6,8 @@ import io.restassured.filter.log.RequestLoggingFilter;
 import io.restassured.filter.log.ResponseLoggingFilter;
 import org.apache.commons.io.output.WriterOutputStream;
 import config.Configuration;
+import util.CurlParser;
+
 import java.io.PrintStream;
 import java.io.StringWriter;
 
@@ -31,9 +33,11 @@ public class Hooks {
     @After
     public void afterScenario(Scenario scenario){
         if (scenario.isFailed()) {
-            scenario.log("Request: \n" + requestWriter.toString());
-            //scenario.log("Response: \n" + responseWriter.toString());
-            RestAssured.given().log();
+            String request = requestWriter.toString();
+            String curl = CurlParser.parseCurl(request);
+            scenario.attach("Request: \n" + request, "text/plain","Request");
+            scenario.attach(curl, "text/plain","Curl");
+            scenario.attach("Response: \n" + responseWriter.toString(), "text/plain","Response");
         }
     }
 

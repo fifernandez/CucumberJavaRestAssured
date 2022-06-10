@@ -35,6 +35,7 @@ public class Environment {
 
     public static String getEnvironment() {
         if (selectedEnv == null) {
+            //System.out.println("Properties" + System.getProperties());
             String consoleEnv = System.getProperty("env");
             if (consoleEnv == null) {
                 System.out.println(String.format("Environment not sent. Going to use default: %s", defaultEnv));

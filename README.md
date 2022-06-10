@@ -1,5 +1,5 @@
-# CucumberJavaRestAssure
-API Automation using Rest Assure, Java, Cucumber and Gradle
+# CucumberJavaRestAssured
+API Automation using Rest Assured, Java, Cucumber and Gradle.
 
 To run the tests:
 -

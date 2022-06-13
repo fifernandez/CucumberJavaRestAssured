@@ -33,7 +33,7 @@ test {
         events TestLogEvent.FAILED, TestLogEvent.PASSED, TestLogEvent.SKIPPED
     }
     systemProperties(project.gradle.startParameter.systemPropertiesArgs)
-    ignoreFailures = true
+    //ignoreFailures = true
 }
 
 cucumberReports {
@@ -75,7 +75,7 @@ task runTests() {
                     '--glue', "src/test/resources/cucumber/features",
                     '--glue', "support"
             ]
-            ignoreExitValue = true
+            //ignoreExitValue = true
         }
     }
 }

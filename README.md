@@ -1,5 +1,6 @@
 # CucumberJavaRestAssured
 API Automation using Rest Assured, Java, Cucumber and Gradle.
+[![cucumber-test-runner](https://github.com/fifernandez/CucumberJavaRestAssured/actions/workflows/cucumber-test-runner.yml/badge.svg)](https://github.com/fifernandez/CucumberJavaRestAssured/actions/workflows/cucumber-test-runner.yml)
 
 To run the tests:
 -

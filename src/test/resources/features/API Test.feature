@@ -4,7 +4,7 @@ Feature: Rest API functionality Scenarios
   That the Rest API is working as expected
 
 
-  @Smoke @1 @2
+  @smoke @1 @2 @prod
   Scenario Outline: Verify status code returned is expected
     Given I do a get to the "<Endpoint>" endpoint
     Then the returned status code is: "<ExpectedCode>"
@@ -15,7 +15,7 @@ Feature: Rest API functionality Scenarios
       | todos    | 200          |
 
 
-  @2 @3
+  @2 @3 @prod @disable
   Scenario Outline: Verify amount of returned items is expected
     Given I do a get to the "<Endpoint>" endpoint
     Then the returned status code is: "200"
@@ -26,7 +26,7 @@ Feature: Rest API functionality Scenarios
       | users    | 10     |
 
 
-  @4 @failing
+  @4 @failing @prod
   Scenario: Verify status code returned is expected 2323
     Given I do a get to the "users" endpoint just to test with bad parameters
     Then the returned status code is: "205"

@@ -23,7 +23,7 @@ jobs:
       - name: RUN Test
         uses: gradle/gradle-build-action@0d13054264b0bb894ded474f08ebb30921341cee
         with:
-          arguments: runTests -Dcucumber.filter.tags=@Smoke
+          arguments: runTests -Dtags=@smoke
       - name: Publish Test Report
         uses: mikepenz/action-junit-report@v3
         if: always() # always run even if the previous step fails

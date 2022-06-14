@@ -20,6 +20,8 @@ Parameters:
   - Add to command line: -Denv=desired
   - Available: dev, qa, stage, prod
   - Default: qa
+  - A tag for the environment will be automatically added, so only scenarios that have the selected environment tag will run.
+
 
 - Mode:
   - You can choose if you want to use public urls or private.
@@ -27,9 +29,12 @@ Parameters:
   - Available: private, public
   - Default: public
 
+
 - Tags:
   - You can choose which scenarios you want to run.
-    - Add to command: -Dcucumber.filter.tags="desired"
+    - Add to command: -tags="desired"
     - Remember each scenario starts with @
-    - You can use "and", "or" and "not" operators.
-    - Example: -Dcucumber.filter.tags="@2 and not @3"
+    - You can use "and", "or", "not" operators and also "(" or ")".
+    - Example: -Dtags="@2 and not @3"
+    - A tag for the environment will be automatically added, so only scenarios that have the selected environment tag will run.
+    - You can disable tests adding the tag @disable.

@@ -10,6 +10,10 @@ Option1:
 - Low console output, just the names of the scenarios and the result.
 
 Option 2:
+- Execute: ./gradlew cucumber
+- Will display all the scenarios in the console output while running along the errors.
+
+Option 3:
  - Execute: ./gradlew runTests
  - Will display all the scenarios in the console output while running along the errors.
 

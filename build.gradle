@@ -8,7 +8,7 @@ plugins {
     id "com.github.spacialcircumstances.gradle-cucumber-reporting" version "0.1.24"
 }
 
-group 'ff.test'
+group 'fifernandez.test'
 version '1.0-SNAPSHOT'
 
 repositories {
@@ -18,7 +18,6 @@ repositories {
 dependencies {
     testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:5.8.2"
     testImplementation "org.junit.jupiter:junit-jupiter-api:5.8.2"
-    //testRuntimeOnly "org.codehaus.groovy:groovy-all:3.0.10"
     testImplementation "io.cucumber:cucumber-java:7.3.2"
     testImplementation "io.cucumber:cucumber-junit:7.3.2"
     testImplementation "org.junit.vintage:junit-vintage-engine:5.8.2"
@@ -53,6 +52,22 @@ configurations {
     }
 }
 
+cucumber {
+    main = 'io.cucumber.core.cli.Main'
+    tags = getTags()
+    plugin = [
+            "pretty",
+            "json:build/reports/cucumber.json",
+            "junit:build/reports/cucumber.xml",
+            "html:build/reports/cucumber-report.html",
+            "rerun:build/reports/rerun.txt",
+    ]
+}
+
+tasks.cucumber {
+    finalizedBy generateCucumberReports
+}
+
 task runTests() {
     dependsOn assemble, testClasses
     finalizedBy generateCucumberReports
@@ -79,18 +94,6 @@ task runTests() {
             //ignoreExitValue = true
         }
     }
-}
-
-cucumber {
-    main = 'io.cucumber.core.cli.Main'
-    //threads = '1'
-    plugin = [
-            "pretty",
-            "json:build/reports/cucumber.json",
-            "junit:build/reports/cucumber.xml",
-            "rerun:build/reports/rerun.txt",
-            "html:build/reports/cucumber-report.html"
-    ]
 }
 
 String getTags() {

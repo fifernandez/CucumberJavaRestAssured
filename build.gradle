@@ -42,7 +42,7 @@ cucumberReports {
     outputDir = file('build/reports/')
     buildId = '0'
     reports = files('build/reports/cucumber.json')
-    excludeTags = []
+    excludeTags = ["@TestCaseID:(|\\w+)", "@dev", "@qa", "@stage", "@prod"]
     expandAllSteps = false
 }
 

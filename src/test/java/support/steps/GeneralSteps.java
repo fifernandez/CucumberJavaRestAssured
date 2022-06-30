@@ -37,12 +37,11 @@ public class GeneralSteps {
     }
 
     @Then("the response contains {string} items")
-    public void responseIsArrayWith(String arg0) {
+    public void responseIsArrayWith(String size) {
         //response.then().statusCode(200);
         response = response.then().extract().response();
-        //scenario.log("Response Received == " + response.asPrettyString());
         JSONArray resJson = new JSONArray(response.asString());
-        Assert.assertEquals(resJson.length() + "", arg0);
+        Assert.assertEquals(resJson.length() + "", size);
     }
 
     @Given("I do a get to the {string} endpoint just to test with bad parameters")

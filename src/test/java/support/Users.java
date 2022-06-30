@@ -6,8 +6,6 @@ import java.util.HashMap;
 public class Users {
 
     private static HashMap<String, HashMap<String, String>> users;
-    //private static JSONObject users = null;
-    private static final String fileName = "src/test/java/util/users.json";
 
     static public String getUserEmail(String userName) {
         return users.get(userName).get("email");

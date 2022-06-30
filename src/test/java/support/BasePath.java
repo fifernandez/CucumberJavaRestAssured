@@ -4,7 +4,6 @@ import org.json.simple.JSONObject;
 import java.util.HashMap;
 
 public class BasePath {
-
     private static HashMap<String, HashMap<String, String>> basePaths;
 
     @SuppressWarnings("unchecked")

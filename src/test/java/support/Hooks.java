@@ -7,7 +7,7 @@ import io.restassured.filter.log.ResponseLoggingFilter;
 import org.apache.commons.io.output.WriterOutputStream;
 import config.Configuration;
 import util.CurlParser;
-
+import util.testrail.TestRailsLogger;
 import java.io.PrintStream;
 import java.io.StringWriter;
 
@@ -17,8 +17,8 @@ public class Hooks {
     public static void setUp(){
         Configuration.loadAllConfigs();
         //RestAssured.port = "";
-        RestAssured.baseURI = BasePath.getBasePath();
         //RestAssured.basePath = "";
+        RestAssured.baseURI = BasePath.getBasePath();
     }
     StringWriter requestWriter = new StringWriter();
     StringWriter responseWriter = new StringWriter();
@@ -38,6 +38,9 @@ public class Hooks {
             scenario.attach("Request: \n" + request, "text/plain","Request");
             scenario.attach(curl, "text/plain","Curl");
             scenario.attach("Response: \n" + responseWriter.toString(), "text/plain","Response");
+            TestRailsLogger.logResultToTestRail(scenario, curl);
+        } else {
+            TestRailsLogger.logResultToTestRail(scenario, "");
         }
     }
 

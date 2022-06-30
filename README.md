@@ -5,7 +5,7 @@ API Automation using Rest Assured, Java, Cucumber and Gradle.
 
 To run the tests:
 -
-Option1:
+Option 1:
 - Execute:  ./gradlew test
 - Low console output, just the names of the scenarios and the result.
 
@@ -23,7 +23,7 @@ Parameters:
   - You can choose which environment you are going to test.
   - Add to command line: -Denv=desired
   - Available: dev, qa, stage, prod
-  - Default: qa
+  - Default: prod
   - A tag for the environment will be automatically added, so only scenarios that have the selected environment tag will run.
 
 

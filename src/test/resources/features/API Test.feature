@@ -17,7 +17,7 @@ Feature: Rest API functionality Scenarios
 
 
   @TestCaseID:02
-  @2 @3 @prod
+  @2 @3 @prod @Flaky
   Scenario Outline: Verify amount of returned items is expected
     Given I do a get to the "<Endpoint>" endpoint
     Then the returned status code is: "200"
@@ -25,7 +25,7 @@ Feature: Rest API functionality Scenarios
 
     Examples:
       | Endpoint | amount |
-      | users    | 10     |
+      | users    | 11     |
 
 
   @TestCaseID:03

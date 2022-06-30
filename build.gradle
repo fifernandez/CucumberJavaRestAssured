@@ -6,6 +6,7 @@ plugins {
     id 'java'
     id 'se.thinkcode.cucumber-runner' version '0.0.11'
     id "com.github.spacialcircumstances.gradle-cucumber-reporting" version "0.1.24"
+    id 'io.qameta.allure' version '2.10.0'
 }
 
 group 'fifernandez.test'
@@ -25,17 +26,28 @@ dependencies {
     testImplementation "com.googlecode.json-simple:json-simple:1.1.1"
     testImplementation "io.rest-assured:rest-assured:5.1.0"
     testImplementation "commons-io:commons-io:2.11.0"
+    testImplementation "io.qameta.allure:allure-cucumber7-jvm:2.18.1"
+    testImplementation "org.slf4j:slf4j-simple:1.7.30"
 }
 
 test {
     systemProperty("cucumber.junit-platform.naming-strategy", "long")
     systemProperty("cucumber.filter.tags", getTags())
+    systemProperty("allure.results.directory", "build/allure-results")
     testLogging {
         events TestLogEvent.FAILED, TestLogEvent.PASSED, TestLogEvent.SKIPPED
     }
     systemProperties(project.gradle.startParameter.systemPropertiesArgs)
     useJUnitPlatform()
-    //ignoreFailures = true
+}
+
+allure {
+    version = '2.8.1'
+    aspectjweaver = true
+    autoconfigure = true
+    /*report {
+        reportDir.set(project.reporting.baseDirectory)
+    }*/
 }
 
 cucumberReports {
@@ -61,11 +73,13 @@ cucumber {
             "junit:build/reports/cucumber.xml",
             "html:build/reports/cucumber-report.html",
             "rerun:build/reports/rerun.txt",
+            "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"
     ]
 }
 
 tasks.cucumber {
     finalizedBy generateCucumberReports
+    System.setProperty("allure.results.directory", "build/allure-results")
 }
 
 task runTests() {
@@ -82,16 +96,17 @@ task runTests() {
                 systemProperty "mode", System.getProperty("mode")
             }
             systemProperty "cucumber.filter.tags", getTags()
+            systemProperty "allure.results.directory", "build/allure-results"
             args = [
                     '--plugin', 'pretty',
                     '--plugin', "json:${reporting.baseDir}/cucumber.json",
                     '--plugin', "junit:${reporting.baseDir}/cucumber.xml",
                     '--plugin', "html:${reporting.baseDir}/cucumber-report.html",
                     '--plugin', "rerun:${reporting.baseDir}/rerun.txt",
-                    '--glue', "src/test/resources/cucumber/features",
+                    '--plugin', "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
+                    '--glue', "src/test/resources/features",
                     '--glue', "support"
             ]
-            //ignoreExitValue = true
         }
     }
 }

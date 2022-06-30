@@ -7,7 +7,7 @@ public class Environment {
     private static String defaultEnv;
     private static String selectedEnv = null;
     private static String defaultMode;
-    private static String selectedMode;
+    private static String selectedMode = null;
     private static ArrayList<String> environments;
     private static ArrayList<String> modes;
 
@@ -18,9 +18,9 @@ public class Environment {
         }
     }
 
-    public static void setModes(JSONArray newEnvs) {
+    public static void setModes(JSONArray newModes) {
         modes = new ArrayList<String>();
-        for (Object newEnv : newEnvs) {
+        for (Object newEnv : newModes) {
             modes.add(newEnv.toString());
         }
     }

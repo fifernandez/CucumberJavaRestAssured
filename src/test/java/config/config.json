@@ -30,9 +30,13 @@
     }
   },
   "testRail": {
-    "url": "",
-    "user": "",
-    "pass": ""
+    "baseUrl": "",
+    "userName": "",
+    "password": "",
+    "SUCCESS_STATE": 1,
+    "SUCCESS_COMMENT": "This test passed with cucumber automation.",
+    "FAIL_STATE": 5,
+    "FAILED_COMMENT": "This test failed with cucumber automation."
   },
   "endpoints": {
     "posts": {

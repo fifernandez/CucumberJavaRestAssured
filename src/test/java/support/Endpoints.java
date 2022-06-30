@@ -5,7 +5,6 @@ import java.util.HashMap;
 
 public class Endpoints {
     private static HashMap<String, HashMap<String, String>> endpoints;
-
     static public String getURI(String uriName) {
         return endpoints.get(uriName).get(Environment.getMode());
     }

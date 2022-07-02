@@ -1,11 +1,15 @@
 package support.steps;
 
+import java.io.File;
 import java.net.URI;
+
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.restassured.RestAssured;
+import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import org.json.JSONArray;
@@ -17,13 +21,14 @@ public class GeneralSteps {
     private Scenario scenario;
     private Response response;
     private String BASE_PATH = Endpoints.getURI("users");
+
     @Before
     public void before(Scenario scenarioVal) {
         this.scenario = scenarioVal;
     }
 
     @Given("I do a get to the {string} endpoint")
-    public void get_call_to_endpoint(String endpoint) throws Exception {
+    public void getCallToEndpoint(String endpoint) throws Exception {
         Assert.assertTrue(String.format("Endpoint '%s' is not defined in the json file.", endpoint), Endpoints.endpointDefined(endpoint));
         BASE_PATH = Endpoints.getURI(endpoint);
         RequestSpecification req = RestAssured.given();
@@ -31,7 +36,7 @@ public class GeneralSteps {
     }
 
     @Then("the returned status code is: {string}")
-    public void response_is_validated(String responseMessage) throws InterruptedException {
+    public void responseCodeIsValidated(String responseMessage) throws InterruptedException {
         int responseCode = response.then().extract().statusCode();
         Assert.assertEquals(responseMessage, String.valueOf(responseCode));
     }
@@ -45,7 +50,7 @@ public class GeneralSteps {
     }
 
     @Given("I do a get to the {string} endpoint just to test with bad parameters")
-    public void iDoAGetToTheEndpointJustToTestWithBadParameters(String endpoint)  throws Exception {
+    public void iDoAGetToTheEndpointJustToTestWithBadParameters(String endpoint) throws Exception {
         Assert.assertTrue(String.format("Endpoint '%s' is not defined in the json file.", endpoint), Endpoints.endpointDefined(endpoint));
         BASE_PATH = Endpoints.getURI(endpoint);
         RequestSpecification req = RestAssured.given();
@@ -58,6 +63,13 @@ public class GeneralSteps {
                 .queryParam("q2=2")
                 .body(requestParams.toString(1))
                 .when().get(new URI(BASE_PATH));
+    }
+
+    @And("the schema for the {string} endpoint with {string} response code is correct")
+    public void theSchemaIsCorrect(String endpoint, String responseCode) {
+        response = response.then().extract().response();
+        response.then().assertThat()
+                .body(JsonSchemaValidator.matchesJsonSchemaInClasspath("schemas/" + endpoint + "-" + responseCode + ".json"));
     }
 }
 

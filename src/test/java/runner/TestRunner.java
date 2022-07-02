@@ -11,11 +11,10 @@ import org.junit.runner.RunWith;
         monochrome = true,
         //dryRun = false,
         plugin = {
-                "pretty",
                 "json:build/reports/cucumber.json",
                 "junit:build/reports/cucumber.xml",
-                "rerun:build/reports/rerun.txt",
                 "html:build/reports/cucumber-report.html",
+                "rerun:build/reports/rerun.txt",
                 "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"
         },
         tags = ""

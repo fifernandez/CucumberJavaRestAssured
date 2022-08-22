@@ -44,11 +44,6 @@ test {
 
 allure {
     version = '2.8.1'
-    aspectjweaver = true
-    autoconfigure = true
-    /*report {
-        reportDir.set(project.reporting.baseDirectory)
-    }*/
 }
 
 cucumberReports {

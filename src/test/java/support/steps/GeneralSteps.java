@@ -1,8 +1,6 @@
 package support.steps;
 
-import java.io.File;
 import java.net.URI;
-
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import io.cucumber.java.en.And;

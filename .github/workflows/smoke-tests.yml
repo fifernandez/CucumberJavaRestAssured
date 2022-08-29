@@ -1,6 +1,10 @@
 name: Smoke Tests
 
-on: [ push, workflow_dispatch ]
+on:
+  push:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *'
 
 jobs:
   Run_Smoke_Tests:

@@ -18,7 +18,7 @@ repositories {
 }
 
 dependencies {
-    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:5.91"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:5.9.1"
     testImplementation "org.junit.jupiter:junit-jupiter-api:5.9.1"
     testImplementation "io.cucumber:cucumber-java:7.9.0"
     testImplementation "io.cucumber:cucumber-junit:7.9.0"
@@ -28,14 +28,14 @@ dependencies {
     testImplementation "io.rest-assured:rest-assured:5.3.0"
     testImplementation "io.rest-assured:json-schema-validator:5.3.0"
     testImplementation "commons-io:commons-io:2.11.0"
-    testImplementation "io.qameta.allure:allure-cucumber7-jvm:2.20.1"
+    testImplementation "io.qameta.allure:allure-cucumber7-jvm:2.18.1"
     testImplementation "com.github.automatedowl:allure-environment-writer:1.0.0"
     testImplementation "org.slf4j:slf4j-simple:1.7.36"
 }
 
 task moveCategories(type: Copy) {
     from "src/test/resources/categories.json"
-    into "build/allure-results"
+    into "build/allure-results/"
 }
 
 test {
@@ -86,9 +86,9 @@ tasks.cucumber {
     System.setProperty("allure.results.directory", "build/allure-results")
 }
 
-tasks.register('runTests') {
+task runTests() {
     dependsOn assemble, testClasses
-    finalizedBy generateCucumberReports, moveCategories
+    finalizedBy generateCucumberReports//, moveCategories
     doLast {
         javaexec {
             mainClass = "io.cucumber.core.cli.Main"
@@ -147,7 +147,7 @@ String getTags() {
 
 static boolean isWantedTag(String tag) {
     List<String> undesiredTags = [
-            "@local", "@dev", "@qa", "@stage", "@demo", "@prod",
+            "@local", "@dev", "@qa", "@stage", "@prod",
             "@smoke", "@sanity", "@regression"
     ]
     if ((!(tag in undesiredTags)) && (!tag.contains('tmsLink=')) && (!tag.contains('issue='))) {
@@ -178,9 +178,11 @@ tasks.register('modifyJsonReport') {
                 ArrayList tags = it.tags
                 ArrayList aux = tags.clone()
                 tags.clear()
-                for (i in 0..aux.size() - 1) {
-                    if (isWantedTag((String) aux[i].name)) {
-                        tags.add(aux[i])
+                if (!aux.isEmpty()) {
+                    for (i in 0..aux.size() - 1) {
+                        if (isWantedTag((String) aux[i].name)) {
+                            tags.add(aux[i])
+                        }
                     }
                 }
             }
@@ -192,6 +194,6 @@ tasks.register('modifyJsonReport') {
     }
 }
 
-/*tasks.generateCucumberReports {
+tasks.generateCucumberReports {
     dependsOn modifyJsonReport
-}*/
+}

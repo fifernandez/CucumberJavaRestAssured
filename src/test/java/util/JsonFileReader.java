@@ -7,7 +7,6 @@ import java.io.FileReader;
 
 public class JsonFileReader {
 
-    @SuppressWarnings("unchecked")
     public static JSONObject readFromFile(String fileName) {
         JSONParser jsonParser = new JSONParser();
         try (FileReader reader = new FileReader(fileName)) {
@@ -19,7 +18,6 @@ public class JsonFileReader {
         return null;
     }
 
-    @SuppressWarnings("unchecked")
     public static JSONArray readJSONArrayFromFile(String fileName, String parameter) {
         JSONParser jsonParser = new JSONParser();
         try (FileReader reader = new FileReader(fileName)) {
@@ -31,7 +29,6 @@ public class JsonFileReader {
         return null;
     }
 
-    @SuppressWarnings("unchecked")
     public static JSONObject readJSONObjectFromFile(String fileName, String parameter) {
         JSONParser jsonParser = new JSONParser();
         try (FileReader reader = new FileReader(fileName)) {

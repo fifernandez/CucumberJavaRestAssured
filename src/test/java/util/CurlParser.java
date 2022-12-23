@@ -6,7 +6,18 @@ import java.util.Scanner;
 
 public class CurlParser {
 
-    public static String parseCurl(String process) {
+    public static String getCurls(String requests) {
+        StringBuilder curls = new StringBuilder();
+        String[] allCurls = requests.replace("Request method:", "#-#Request method:").split("#-#");
+        for (int i = 1; i < allCurls.length; i++) {
+            curls.append("Curl ").append(i).append(": \n");
+            curls.append(prepareCurl(allCurls[i]));
+            curls.append("\n").append("\n");
+        }
+        return curls.toString();
+    }
+
+    public static String prepareCurl(String process) {
         HashMap<String, Object> request = new HashMap<String, Object>();
         ArrayList<String> headers = new ArrayList<String>();
         ArrayList<String> queryParams = new ArrayList<String>();
@@ -52,17 +63,23 @@ public class CurlParser {
                     currentMultiline = "body";
                 } else {
                     String aux = line.replace("\t", "").replace(" ", "");
-                    if (currentMultiline.equals("headers")) {
-                        aux = aux.replace("=", ":");
-                        headers.add(aux);
-                    } else if (currentMultiline.equals("queryParams")) {
-                        queryParams.add(aux);
-                    } else if (currentMultiline.equals("formParams")) {
-                        formParams.add(aux);
-                    } else if (currentMultiline.equals("cookies")) {
-                        cookies.add(aux);
-                    } else if (currentMultiline.equals("body")) {
-                        body = body.concat(aux);
+                    switch (currentMultiline) {
+                        case "headers":
+                            aux = aux.replace("=", ":");
+                            headers.add(aux);
+                            break;
+                        case "queryParams":
+                            queryParams.add(aux);
+                            break;
+                        case "formParams":
+                            formParams.add(aux);
+                            break;
+                        case "cookies":
+                            cookies.add(aux);
+                            break;
+                        case "body":
+                            body = body.concat(aux);
+                            break;
                     }
                 }
             }
@@ -142,7 +159,7 @@ public class CurlParser {
                 " \"password\": \"Testrest@123\",\n" +
                 " \"userName\": \"test_rest\"\n" +
                 "}\n";
-        System.out.println(parseCurl(request));
+        System.out.println(getCurls(request));
     }
 
 }

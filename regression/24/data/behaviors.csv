@@ -1,0 +1,4 @@
+"Epic","Feature","Story","FAILED","BROKEN","PASSED","SKIPPED","UNKNOWN"
+"","Rest API functionality Scenarios","Verify status code returned is expected","0","0","2","0","0"
+"","Rest API functionality Scenarios","Verify amount of returned items is expected","0","0","1","0","0"
+"","Rest API functionality Scenarios","Just a failing test","1","0","0","0","0"

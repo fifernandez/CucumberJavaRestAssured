@@ -4,7 +4,7 @@ Feature: Rest API functionality Scenarios
   That the Rest API is working as expected
 
 
-  @TestCaseID:01
+  @tmsLink=01 @severity=critical
     @smoke @regression
     @1 @2 @prod
   Scenario Outline: Verify status code returned is expected
@@ -18,9 +18,9 @@ Feature: Rest API functionality Scenarios
       | todos    | 200          |
 
 
-  @TestCaseID:02
+  @tmsLink=02 @severity=normal
     @smoke @regression
-    @2 @3 @prod @Flaky
+    @2 @3 @prod
   Scenario Outline: Verify amount of returned items is expected
     Given I do a get to the "<Endpoint>" endpoint
     Then the returned status code is: "200"
@@ -31,7 +31,7 @@ Feature: Rest API functionality Scenarios
       | users    | 10     |
 
 
-  @TestCaseID:03
+  @tmsLink=03 @severity=minor @issue=123 @Flaky
   @regression
   @4 @prod
   Scenario: Just a failing test

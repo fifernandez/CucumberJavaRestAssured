@@ -1,5 +1,6 @@
 package support;
 
+import com.google.common.collect.ImmutableMap;
 import io.cucumber.java.*;
 import io.restassured.RestAssured;
 import io.restassured.filter.log.RequestLoggingFilter;
@@ -10,6 +11,8 @@ import util.CurlParser;
 import util.testrail.TestRailsLogger;
 import java.io.PrintStream;
 import java.io.StringWriter;
+import java.util.HashMap;
+import static com.github.automatedowl.tools.AllureEnvironmentWriter.allureEnvironmentWriter;
 
 public class Hooks {
 
@@ -19,7 +22,26 @@ public class Hooks {
         //RestAssured.port = "";
         //RestAssured.basePath = "";
         RestAssured.baseURI = BasePath.getBasePath();
+        setUpAllureEnv();
     }
+
+    public static void setUpAllureEnv() {
+        String tags = System.getProperty("tags");
+        if (tags == null || tags.isEmpty()) {
+            tags = "ALL";
+        }
+        String testRun = System.getProperty("testRunID");
+        HashMap<String, String> properties = new HashMap<String, String>();
+        properties.put("Environment:", Environment.getEnvironment().toUpperCase());
+        if (testRun == null || !testRun.isEmpty()) {
+            properties.put("Test Run:", "https://project.testrail.io/index.php?/runs/view/" + testRun);
+        }
+        properties.put("Base url:", BasePath.getBasePath());
+        properties.put("Tags:", tags);
+        ImmutableMap<String, String> immutableMap = ImmutableMap.copyOf(properties);
+        allureEnvironmentWriter(immutableMap, System.getProperty("user.dir") + "/build/allure-results/");
+    }
+
     StringWriter requestWriter = new StringWriter();
     StringWriter responseWriter = new StringWriter();
 
@@ -34,10 +56,10 @@ public class Hooks {
     public void afterScenario(Scenario scenario){
         if (scenario.isFailed()) {
             String request = requestWriter.toString();
-            String curl = CurlParser.parseCurl(request);
-            scenario.attach("Request: \n" + request, "text/plain","Request");
-            scenario.attach(curl, "text/plain","Curl");
-            scenario.attach("Response: \n" + responseWriter.toString(), "text/plain","Response");
+            String curl = CurlParser.getCurls(request);
+            scenario.attach("Request: \n" + request, "text/plain","Requests");
+            scenario.attach(curl, "text/plain","Curls");
+            scenario.attach("Response: \n" + responseWriter.toString(), "text/plain","Responses");
             TestRailsLogger.logResultToTestRail(scenario, curl);
         } else {
             TestRailsLogger.logResultToTestRail(scenario, "");

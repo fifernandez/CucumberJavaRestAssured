@@ -1,21 +1,18 @@
-Feature: Rest API functionality Scenarios
+@Users
+
+Feature: Users Endpoint
   As a developer
   I want to be sure
-  That the Rest API is working as expected
+  That the Users Endpoint is working as expected
 
 
   @tmsLink=01 @severity=critical
     @smoke @regression
     @1 @2 @prod
-  Scenario Outline: Verify status code returned is expected
-    Given I do a get to the "<Endpoint>" endpoint
-    Then the returned status code is: "<ExpectedCode>"
-    And the schema for the "<Endpoint>" endpoint with "<ExpectedCode>" response code is correct
-
-    Examples:
-      | Endpoint | ExpectedCode |
-      | users    | 200          |
-      | todos    | 200          |
+  Scenario: Verify status code returned is expected
+    Given I do a get to the "users" endpoint
+    Then the returned status code is: "200"
+    And the schema for the "users" endpoint with "200" response code is correct
 
 
   @tmsLink=02 @severity=normal
@@ -29,6 +26,7 @@ Feature: Rest API functionality Scenarios
     Examples:
       | Endpoint | amount |
       | users    | 10     |
+      | users    | 22     |
 
 
   @tmsLink=03 @severity=minor @issue=123 @Flaky

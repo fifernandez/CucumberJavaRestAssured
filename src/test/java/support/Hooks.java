@@ -26,14 +26,14 @@ public class Hooks {
     }
 
     public static void setUpAllureEnv() {
-        String tags = System.getProperty("tags");
+        String tags = System.getProperty("cucumber.filter.tags");
         if (tags == null || tags.isEmpty()) {
             tags = "ALL";
         }
         String testRun = System.getProperty("testRunID");
         HashMap<String, String> properties = new HashMap<String, String>();
         properties.put("Environment:", Environment.getEnvironment().toUpperCase());
-        if (testRun == null || !testRun.isEmpty()) {
+        if (testRun != null) {
             properties.put("Test Run:", "https://project.testrail.io/index.php?/runs/view/" + testRun);
         }
         properties.put("Base url:", BasePath.getBasePath());

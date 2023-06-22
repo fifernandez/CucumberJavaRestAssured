@@ -1,0 +1,22 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Thu Jun 22 01:08:20 GMT 2023","Thu Jun 22 01:08:20 GMT 2023","126","","Todos Endpoint","","Verify status code returned is expected","","Verify status code returned is expected","  As a developer
+  I want to be sure
+  That the Todos endpoint is working as expected"
+"passed","Thu Jun 22 01:08:20 GMT 2023","Thu Jun 22 01:08:20 GMT 2023","170","","Todos Endpoint","","Verify amount of returned items is expected","","Verify amount of returned items is expected","  As a developer
+  I want to be sure
+  That the Todos endpoint is working as expected"
+"passed","Thu Jun 22 01:08:18 GMT 2023","Thu Jun 22 01:08:20 GMT 2023","1642","","Posts Endpoint","","Verify status code returned is expected","","Verify status code returned is expected","  As a developer
+  I want to be sure
+  That the Posts endpoint is working as expected"
+"failed","Thu Jun 22 01:08:21 GMT 2023","Thu Jun 22 01:08:21 GMT 2023","122","","Users Endpoint","","Verify amount of returned items is expected","","Verify amount of returned items is expected","  As a developer
+  I want to be sure
+  That the Users Endpoint is working as expected"
+"passed","Thu Jun 22 01:08:20 GMT 2023","Thu Jun 22 01:08:20 GMT 2023","90","","Posts Endpoint","","Verify amount of returned items is expected","","Verify amount of returned items is expected","  As a developer
+  I want to be sure
+  That the Posts endpoint is working as expected"
+"passed","Thu Jun 22 01:08:21 GMT 2023","Thu Jun 22 01:08:21 GMT 2023","56","","Users Endpoint","","Verify amount of returned items is expected","","Verify amount of returned items is expected","  As a developer
+  I want to be sure
+  That the Users Endpoint is working as expected"
+"passed","Thu Jun 22 01:08:21 GMT 2023","Thu Jun 22 01:08:21 GMT 2023","89","","Users Endpoint","","Verify status code returned is expected","","Verify status code returned is expected","  As a developer
+  I want to be sure
+  That the Users Endpoint is working as expected"

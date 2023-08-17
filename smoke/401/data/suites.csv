@@ -1,0 +1,22 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"failed","Thu Aug 17 00:48:57 GMT 2023","Thu Aug 17 00:48:57 GMT 2023","97","","Users Endpoint","","Verify amount of returned items is expected","","Verify amount of returned items is expected","  As a developer
+  I want to be sure
+  That the Users Endpoint is working as expected"
+"passed","Thu Aug 17 00:48:54 GMT 2023","Thu Aug 17 00:48:56 GMT 2023","1863","","Posts Endpoint","","Verify status code returned is expected","","Verify status code returned is expected","  As a developer
+  I want to be sure
+  That the Posts endpoint is working as expected"
+"passed","Thu Aug 17 00:48:57 GMT 2023","Thu Aug 17 00:48:57 GMT 2023","147","","Users Endpoint","","Verify status code returned is expected","","Verify status code returned is expected","  As a developer
+  I want to be sure
+  That the Users Endpoint is working as expected"
+"passed","Thu Aug 17 00:48:56 GMT 2023","Thu Aug 17 00:48:57 GMT 2023","148","","Todos Endpoint","","Verify amount of returned items is expected","","Verify amount of returned items is expected","  As a developer
+  I want to be sure
+  That the Todos endpoint is working as expected"
+"passed","Thu Aug 17 00:48:56 GMT 2023","Thu Aug 17 00:48:56 GMT 2023","206","","Todos Endpoint","","Verify status code returned is expected","","Verify status code returned is expected","  As a developer
+  I want to be sure
+  That the Todos endpoint is working as expected"
+"passed","Thu Aug 17 00:48:56 GMT 2023","Thu Aug 17 00:48:56 GMT 2023","161","","Posts Endpoint","","Verify amount of returned items is expected","","Verify amount of returned items is expected","  As a developer
+  I want to be sure
+  That the Posts endpoint is working as expected"
+"passed","Thu Aug 17 00:48:57 GMT 2023","Thu Aug 17 00:48:57 GMT 2023","115","","Users Endpoint","","Verify amount of returned items is expected","","Verify amount of returned items is expected","  As a developer
+  I want to be sure
+  That the Users Endpoint is working as expected"

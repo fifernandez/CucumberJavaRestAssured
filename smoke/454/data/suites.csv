@@ -1,0 +1,22 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Mon Oct 09 00:52:37 GMT 2023","Mon Oct 09 00:52:37 GMT 2023","90","","Users Endpoint","","Verify status code returned is expected","","Verify status code returned is expected","  As a developer
+  I want to be sure
+  That the Users Endpoint is working as expected"
+"passed","Mon Oct 09 00:52:37 GMT 2023","Mon Oct 09 00:52:37 GMT 2023","121","","Todos Endpoint","","Verify status code returned is expected","","Verify status code returned is expected","  As a developer
+  I want to be sure
+  That the Todos endpoint is working as expected"
+"failed","Mon Oct 09 00:52:37 GMT 2023","Mon Oct 09 00:52:37 GMT 2023","118","","Users Endpoint","","Verify amount of returned items is expected","","Verify amount of returned items is expected","  As a developer
+  I want to be sure
+  That the Users Endpoint is working as expected"
+"passed","Mon Oct 09 00:52:37 GMT 2023","Mon Oct 09 00:52:37 GMT 2023","98","","Users Endpoint","","Verify amount of returned items is expected","","Verify amount of returned items is expected","  As a developer
+  I want to be sure
+  That the Users Endpoint is working as expected"
+"passed","Mon Oct 09 00:52:37 GMT 2023","Mon Oct 09 00:52:37 GMT 2023","149","","Todos Endpoint","","Verify amount of returned items is expected","","Verify amount of returned items is expected","  As a developer
+  I want to be sure
+  That the Todos endpoint is working as expected"
+"passed","Mon Oct 09 00:52:37 GMT 2023","Mon Oct 09 00:52:37 GMT 2023","160","","Posts Endpoint","","Verify amount of returned items is expected","","Verify amount of returned items is expected","  As a developer
+  I want to be sure
+  That the Posts endpoint is working as expected"
+"passed","Mon Oct 09 00:52:35 GMT 2023","Mon Oct 09 00:52:36 GMT 2023","1613","","Posts Endpoint","","Verify status code returned is expected","","Verify status code returned is expected","  As a developer
+  I want to be sure
+  That the Posts endpoint is working as expected"

@@ -1,0 +1,22 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Sun Oct 15 00:56:34 GMT 2023","Sun Oct 15 00:56:34 GMT 2023","145","","Users Endpoint","","Verify status code returned is expected","","Verify status code returned is expected","  As a developer
+  I want to be sure
+  That the Users Endpoint is working as expected"
+"passed","Sun Oct 15 00:56:33 GMT 2023","Sun Oct 15 00:56:33 GMT 2023","183","","Posts Endpoint","","Verify amount of returned items is expected","","Verify amount of returned items is expected","  As a developer
+  I want to be sure
+  That the Posts endpoint is working as expected"
+"failed","Sun Oct 15 00:56:34 GMT 2023","Sun Oct 15 00:56:34 GMT 2023","136","","Users Endpoint","","Verify amount of returned items is expected","","Verify amount of returned items is expected","  As a developer
+  I want to be sure
+  That the Users Endpoint is working as expected"
+"passed","Sun Oct 15 00:56:34 GMT 2023","Sun Oct 15 00:56:34 GMT 2023","152","","Todos Endpoint","","Verify status code returned is expected","","Verify status code returned is expected","  As a developer
+  I want to be sure
+  That the Todos endpoint is working as expected"
+"passed","Sun Oct 15 00:56:31 GMT 2023","Sun Oct 15 00:56:33 GMT 2023","2156","","Posts Endpoint","","Verify status code returned is expected","","Verify status code returned is expected","  As a developer
+  I want to be sure
+  That the Posts endpoint is working as expected"
+"passed","Sun Oct 15 00:56:34 GMT 2023","Sun Oct 15 00:56:34 GMT 2023","102","","Users Endpoint","","Verify amount of returned items is expected","","Verify amount of returned items is expected","  As a developer
+  I want to be sure
+  That the Users Endpoint is working as expected"
+"passed","Sun Oct 15 00:56:34 GMT 2023","Sun Oct 15 00:56:34 GMT 2023","186","","Todos Endpoint","","Verify amount of returned items is expected","","Verify amount of returned items is expected","  As a developer
+  I want to be sure
+  That the Todos endpoint is working as expected"

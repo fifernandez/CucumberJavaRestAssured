@@ -1,0 +1,22 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Tue Nov 14 00:53:36 GMT 2023","Tue Nov 14 00:53:36 GMT 2023","77","","Users Endpoint","","Verify amount of returned items is expected","","Verify amount of returned items is expected","  As a developer
+  I want to be sure
+  That the Users Endpoint is working as expected"
+"failed","Tue Nov 14 00:53:36 GMT 2023","Tue Nov 14 00:53:36 GMT 2023","86","","Users Endpoint","","Verify amount of returned items is expected","","Verify amount of returned items is expected","  As a developer
+  I want to be sure
+  That the Users Endpoint is working as expected"
+"passed","Tue Nov 14 00:53:34 GMT 2023","Tue Nov 14 00:53:36 GMT 2023","1233","","Posts Endpoint","","Verify status code returned is expected","","Verify status code returned is expected","  As a developer
+  I want to be sure
+  That the Posts endpoint is working as expected"
+"passed","Tue Nov 14 00:53:36 GMT 2023","Tue Nov 14 00:53:36 GMT 2023","109","","Posts Endpoint","","Verify amount of returned items is expected","","Verify amount of returned items is expected","  As a developer
+  I want to be sure
+  That the Posts endpoint is working as expected"
+"passed","Tue Nov 14 00:53:36 GMT 2023","Tue Nov 14 00:53:36 GMT 2023","120","","Todos Endpoint","","Verify status code returned is expected","","Verify status code returned is expected","  As a developer
+  I want to be sure
+  That the Todos endpoint is working as expected"
+"passed","Tue Nov 14 00:53:36 GMT 2023","Tue Nov 14 00:53:36 GMT 2023","90","","Users Endpoint","","Verify status code returned is expected","","Verify status code returned is expected","  As a developer
+  I want to be sure
+  That the Users Endpoint is working as expected"
+"passed","Tue Nov 14 00:53:36 GMT 2023","Tue Nov 14 00:53:36 GMT 2023","119","","Todos Endpoint","","Verify amount of returned items is expected","","Verify amount of returned items is expected","  As a developer
+  I want to be sure
+  That the Todos endpoint is working as expected"

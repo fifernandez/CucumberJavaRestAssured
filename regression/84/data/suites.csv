@@ -1,0 +1,25 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Mon Jan 01 02:12:43 GMT 2024","Mon Jan 01 02:12:43 GMT 2024","134","","Users Endpoint","","Verify status code returned is expected","","Verify status code returned is expected","  As a developer
+  I want to be sure
+  That the Users Endpoint is working as expected"
+"failed","Mon Jan 01 02:12:43 GMT 2024","Mon Jan 01 02:12:43 GMT 2024","97","","Users Endpoint","","Just a failing test","","Just a failing test","  As a developer
+  I want to be sure
+  That the Users Endpoint is working as expected"
+"passed","Mon Jan 01 02:12:43 GMT 2024","Mon Jan 01 02:12:43 GMT 2024","56","","Users Endpoint","","Verify amount of returned items is expected","","Verify amount of returned items is expected","  As a developer
+  I want to be sure
+  That the Users Endpoint is working as expected"
+"passed","Mon Jan 01 02:12:41 GMT 2024","Mon Jan 01 02:12:42 GMT 2024","1178","","Posts Endpoint","","Verify status code returned is expected","","Verify status code returned is expected","  As a developer
+  I want to be sure
+  That the Posts endpoint is working as expected"
+"failed","Mon Jan 01 02:12:43 GMT 2024","Mon Jan 01 02:12:43 GMT 2024","61","","Users Endpoint","","Verify amount of returned items is expected","","Verify amount of returned items is expected","  As a developer
+  I want to be sure
+  That the Users Endpoint is working as expected"
+"passed","Mon Jan 01 02:12:42 GMT 2024","Mon Jan 01 02:12:43 GMT 2024","81","","Todos Endpoint","","Verify amount of returned items is expected","","Verify amount of returned items is expected","  As a developer
+  I want to be sure
+  That the Todos endpoint is working as expected"
+"passed","Mon Jan 01 02:12:42 GMT 2024","Mon Jan 01 02:12:42 GMT 2024","82","","Posts Endpoint","","Verify amount of returned items is expected","","Verify amount of returned items is expected","  As a developer
+  I want to be sure
+  That the Posts endpoint is working as expected"
+"passed","Mon Jan 01 02:12:42 GMT 2024","Mon Jan 01 02:12:42 GMT 2024","89","","Todos Endpoint","","Verify status code returned is expected","","Verify status code returned is expected","  As a developer
+  I want to be sure
+  That the Todos endpoint is working as expected"

@@ -1,0 +1,22 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Mon Jan 01 01:00:18 GMT 2024","Mon Jan 01 01:00:18 GMT 2024","77","","Posts Endpoint","","Verify amount of returned items is expected","","Verify amount of returned items is expected","  As a developer
+  I want to be sure
+  That the Posts endpoint is working as expected"
+"passed","Mon Jan 01 01:00:18 GMT 2024","Mon Jan 01 01:00:19 GMT 2024","99","","Users Endpoint","","Verify status code returned is expected","","Verify status code returned is expected","  As a developer
+  I want to be sure
+  That the Users Endpoint is working as expected"
+"passed","Mon Jan 01 01:00:18 GMT 2024","Mon Jan 01 01:00:18 GMT 2024","84","","Todos Endpoint","","Verify status code returned is expected","","Verify status code returned is expected","  As a developer
+  I want to be sure
+  That the Todos endpoint is working as expected"
+"failed","Mon Jan 01 01:00:19 GMT 2024","Mon Jan 01 01:00:19 GMT 2024","70","","Users Endpoint","","Verify amount of returned items is expected","","Verify amount of returned items is expected","  As a developer
+  I want to be sure
+  That the Users Endpoint is working as expected"
+"passed","Mon Jan 01 01:00:18 GMT 2024","Mon Jan 01 01:00:18 GMT 2024","71","","Todos Endpoint","","Verify amount of returned items is expected","","Verify amount of returned items is expected","  As a developer
+  I want to be sure
+  That the Todos endpoint is working as expected"
+"passed","Mon Jan 01 01:00:19 GMT 2024","Mon Jan 01 01:00:19 GMT 2024","59","","Users Endpoint","","Verify amount of returned items is expected","","Verify amount of returned items is expected","  As a developer
+  I want to be sure
+  That the Users Endpoint is working as expected"
+"passed","Mon Jan 01 01:00:17 GMT 2024","Mon Jan 01 01:00:18 GMT 2024","1209","","Posts Endpoint","","Verify status code returned is expected","","Verify status code returned is expected","  As a developer
+  I want to be sure
+  That the Posts endpoint is working as expected"

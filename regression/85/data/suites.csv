@@ -1,0 +1,25 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Mon Jan 08 02:08:34 GMT 2024","Mon Jan 08 02:08:34 GMT 2024","115","","Todos Endpoint","","Verify status code returned is expected","","Verify status code returned is expected","  As a developer
+  I want to be sure
+  That the Todos endpoint is working as expected"
+"passed","Mon Jan 08 02:08:34 GMT 2024","Mon Jan 08 02:08:34 GMT 2024","108","","Todos Endpoint","","Verify amount of returned items is expected","","Verify amount of returned items is expected","  As a developer
+  I want to be sure
+  That the Todos endpoint is working as expected"
+"passed","Mon Jan 08 02:08:34 GMT 2024","Mon Jan 08 02:08:34 GMT 2024","102","","Users Endpoint","","Verify status code returned is expected","","Verify status code returned is expected","  As a developer
+  I want to be sure
+  That the Users Endpoint is working as expected"
+"failed","Mon Jan 08 02:08:34 GMT 2024","Mon Jan 08 02:08:35 GMT 2024","87","","Users Endpoint","","Verify amount of returned items is expected","","Verify amount of returned items is expected","  As a developer
+  I want to be sure
+  That the Users Endpoint is working as expected"
+"passed","Mon Jan 08 02:08:34 GMT 2024","Mon Jan 08 02:08:34 GMT 2024","110","","Posts Endpoint","","Verify amount of returned items is expected","","Verify amount of returned items is expected","  As a developer
+  I want to be sure
+  That the Posts endpoint is working as expected"
+"passed","Mon Jan 08 02:08:33 GMT 2024","Mon Jan 08 02:08:34 GMT 2024","1350","","Posts Endpoint","","Verify status code returned is expected","","Verify status code returned is expected","  As a developer
+  I want to be sure
+  That the Posts endpoint is working as expected"
+"failed","Mon Jan 08 02:08:35 GMT 2024","Mon Jan 08 02:08:35 GMT 2024","307","","Users Endpoint","","Just a failing test","","Just a failing test","  As a developer
+  I want to be sure
+  That the Users Endpoint is working as expected"
+"passed","Mon Jan 08 02:08:34 GMT 2024","Mon Jan 08 02:08:34 GMT 2024","87","","Users Endpoint","","Verify amount of returned items is expected","","Verify amount of returned items is expected","  As a developer
+  I want to be sure
+  That the Users Endpoint is working as expected"

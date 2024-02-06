@@ -1,0 +1,22 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Tue Feb 06 00:52:16 GMT 2024","Tue Feb 06 00:52:16 GMT 2024","83","","Todos Endpoint","","Verify amount of returned items is expected","","Verify amount of returned items is expected","  As a developer
+  I want to be sure
+  That the Todos endpoint is working as expected"
+"passed","Tue Feb 06 00:52:16 GMT 2024","Tue Feb 06 00:52:17 GMT 2024","97","","Users Endpoint","","Verify status code returned is expected","","Verify status code returned is expected","  As a developer
+  I want to be sure
+  That the Users Endpoint is working as expected"
+"failed","Tue Feb 06 00:52:17 GMT 2024","Tue Feb 06 00:52:17 GMT 2024","67","","Users Endpoint","","Verify amount of returned items is expected","","Verify amount of returned items is expected","  As a developer
+  I want to be sure
+  That the Users Endpoint is working as expected"
+"passed","Tue Feb 06 00:52:16 GMT 2024","Tue Feb 06 00:52:16 GMT 2024","103","","Todos Endpoint","","Verify status code returned is expected","","Verify status code returned is expected","  As a developer
+  I want to be sure
+  That the Todos endpoint is working as expected"
+"passed","Tue Feb 06 00:52:17 GMT 2024","Tue Feb 06 00:52:17 GMT 2024","64","","Users Endpoint","","Verify amount of returned items is expected","","Verify amount of returned items is expected","  As a developer
+  I want to be sure
+  That the Users Endpoint is working as expected"
+"passed","Tue Feb 06 00:52:15 GMT 2024","Tue Feb 06 00:52:16 GMT 2024","1238","","Posts Endpoint","","Verify status code returned is expected","","Verify status code returned is expected","  As a developer
+  I want to be sure
+  That the Posts endpoint is working as expected"
+"passed","Tue Feb 06 00:52:16 GMT 2024","Tue Feb 06 00:52:16 GMT 2024","96","","Posts Endpoint","","Verify amount of returned items is expected","","Verify amount of returned items is expected","  As a developer
+  I want to be sure
+  That the Posts endpoint is working as expected"

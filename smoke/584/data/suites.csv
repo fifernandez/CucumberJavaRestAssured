@@ -1,0 +1,22 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Fri Feb 16 00:52:03 GMT 2024","Fri Feb 16 00:52:03 GMT 2024","87","","Users Endpoint","","Verify status code returned is expected","","Verify status code returned is expected","  As a developer
+  I want to be sure
+  That the Users Endpoint is working as expected"
+"passed","Fri Feb 16 00:52:03 GMT 2024","Fri Feb 16 00:52:03 GMT 2024","91","","Todos Endpoint","","Verify amount of returned items is expected","","Verify amount of returned items is expected","  As a developer
+  I want to be sure
+  That the Todos endpoint is working as expected"
+"passed","Fri Feb 16 00:52:01 GMT 2024","Fri Feb 16 00:52:02 GMT 2024","1188","","Posts Endpoint","","Verify status code returned is expected","","Verify status code returned is expected","  As a developer
+  I want to be sure
+  That the Posts endpoint is working as expected"
+"passed","Fri Feb 16 00:52:03 GMT 2024","Fri Feb 16 00:52:03 GMT 2024","51","","Users Endpoint","","Verify amount of returned items is expected","","Verify amount of returned items is expected","  As a developer
+  I want to be sure
+  That the Users Endpoint is working as expected"
+"passed","Fri Feb 16 00:52:02 GMT 2024","Fri Feb 16 00:52:03 GMT 2024","86","","Posts Endpoint","","Verify amount of returned items is expected","","Verify amount of returned items is expected","  As a developer
+  I want to be sure
+  That the Posts endpoint is working as expected"
+"passed","Fri Feb 16 00:52:03 GMT 2024","Fri Feb 16 00:52:03 GMT 2024","88","","Todos Endpoint","","Verify status code returned is expected","","Verify status code returned is expected","  As a developer
+  I want to be sure
+  That the Todos endpoint is working as expected"
+"failed","Fri Feb 16 00:52:03 GMT 2024","Fri Feb 16 00:52:03 GMT 2024","59","","Users Endpoint","","Verify amount of returned items is expected","","Verify amount of returned items is expected","  As a developer
+  I want to be sure
+  That the Users Endpoint is working as expected"

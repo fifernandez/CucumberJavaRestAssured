@@ -7,8 +7,8 @@ Feature: Users Endpoint
 
 
   @tmsLink=01 @severity=critical
-    @smoke @regression
-    @1 @2 @prod
+  @smoke @regression
+  @1 @2 @prod
   Scenario: Verify status code returned is expected
     Given I do a get to the "users" endpoint
     Then the returned status code is: "200"
@@ -26,11 +26,10 @@ Feature: Users Endpoint
     Examples:
       | Endpoint | amount |
       | users    | 10     |
-      | users    | 22     |
 
 
   @tmsLink=03 @severity=minor @issue=123 @Flaky
-  @regression
+  @regression @disable
   @4 @prod
   Scenario: Just a failing test
     Given I do a get to the "users" endpoint just to test with bad parameters

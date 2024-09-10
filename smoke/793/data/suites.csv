@@ -1,0 +1,19 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Tue Sep 10 01:05:58 GMT 2024","Tue Sep 10 01:05:58 GMT 2024","95","","Posts Endpoint","","Verify amount of returned items is expected","","Verify amount of returned items is expected","  As a developer
+  I want to be sure
+  That the Posts endpoint is working as expected"
+"passed","Tue Sep 10 01:05:58 GMT 2024","Tue Sep 10 01:05:58 GMT 2024","79","","Users Endpoint","","Verify status code returned is expected","","Verify status code returned is expected","  As a developer
+  I want to be sure
+  That the Users Endpoint is working as expected"
+"passed","Tue Sep 10 01:05:58 GMT 2024","Tue Sep 10 01:05:59 GMT 2024","369","","Users Endpoint","","Verify amount of returned items is expected","","Verify amount of returned items is expected","  As a developer
+  I want to be sure
+  That the Users Endpoint is working as expected"
+"passed","Tue Sep 10 01:05:56 GMT 2024","Tue Sep 10 01:05:58 GMT 2024","1339","","Posts Endpoint","","Verify status code returned is expected","","Verify status code returned is expected","  As a developer
+  I want to be sure
+  That the Posts endpoint is working as expected"
+"passed","Tue Sep 10 01:05:58 GMT 2024","Tue Sep 10 01:05:58 GMT 2024","83","","Todos Endpoint","","Verify status code returned is expected","","Verify status code returned is expected","  As a developer
+  I want to be sure
+  That the Todos endpoint is working as expected"
+"passed","Tue Sep 10 01:05:58 GMT 2024","Tue Sep 10 01:05:58 GMT 2024","98","","Todos Endpoint","","Verify amount of returned items is expected","","Verify amount of returned items is expected","  As a developer
+  I want to be sure
+  That the Todos endpoint is working as expected"

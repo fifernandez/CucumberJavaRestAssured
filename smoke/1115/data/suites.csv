@@ -1,0 +1,19 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"  As a developer
+  I want to be sure
+  That the Users Endpoint is working as expected","87","Verify amount of returned items is expected","","Tue Jul 29 01:48:27 GMT 2025","passed","Tue Jul 29 01:48:27 GMT 2025","","Users Endpoint","Verify amount of returned items is expected",""
+"  As a developer
+  I want to be sure
+  That the Users Endpoint is working as expected","144","Verify status code returned is expected","","Tue Jul 29 01:48:27 GMT 2025","passed","Tue Jul 29 01:48:27 GMT 2025","","Users Endpoint","Verify status code returned is expected",""
+"  As a developer
+  I want to be sure
+  That the Todos endpoint is working as expected","338","Verify status code returned is expected","","Tue Jul 29 01:48:26 GMT 2025","passed","Tue Jul 29 01:48:27 GMT 2025","","Todos Endpoint","Verify status code returned is expected",""
+"  As a developer
+  I want to be sure
+  That the Posts endpoint is working as expected","1710","Verify status code returned is expected","","Tue Jul 29 01:48:24 GMT 2025","passed","Tue Jul 29 01:48:26 GMT 2025","","Posts Endpoint","Verify status code returned is expected",""
+"  As a developer
+  I want to be sure
+  That the Posts endpoint is working as expected","188","Verify amount of returned items is expected","","Tue Jul 29 01:48:26 GMT 2025","passed","Tue Jul 29 01:48:26 GMT 2025","","Posts Endpoint","Verify amount of returned items is expected",""
+"  As a developer
+  I want to be sure
+  That the Todos endpoint is working as expected","108","Verify amount of returned items is expected","","Tue Jul 29 01:48:27 GMT 2025","passed","Tue Jul 29 01:48:27 GMT 2025","","Todos Endpoint","Verify amount of returned items is expected",""

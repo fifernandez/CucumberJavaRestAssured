@@ -1,0 +1,11 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Cucumber: current feature",
+            "type": "node-terminal",
+            "request": "launch",
+            "command": "./gradlew cucumberFeature -Pfeature=\"${relativeFile}\" --console=plain"
+        }
+    ]
+}
